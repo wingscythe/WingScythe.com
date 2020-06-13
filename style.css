@@ -1,3 +1,7 @@
+html, body {
+    min-height: 90%;
+}
+
 /*body*/
 body{
     /* Background pattern from transparenttextures.com, which uses Toptal Subtle Patterns*/
@@ -88,28 +92,40 @@ body{
     100% { box-shadow: 0 0 -10px black; transform-origin: left; transform:rotate(360deg);}
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .glowanim {
 /*  animation: glowblack 5000ms infinite;*/
     animation: glowwhite 5000ms infinite;
 }
 
 /*Center Block*/
-.centBlock{
-    position:absolute;
-    text-align: center;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+.centblock{
+    min-height: 63vh;
+    height:100%;
     width:100%;
-    height:auto;
 }
 
 .centgn{
+    padding-top: 13vh;
     text-align: center;
+    font-size: 100px;
 }
 
 .centgd{
     text-align: center;
+}
+
+.thickbar{
+    border: 10px solid white;
+}
+
+#mainscreen{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 /*Navbar*/
@@ -121,10 +137,16 @@ body{
     margin: 0;
     padding: 0;
     transition: 0.3s;
+    z-index: 2;
 }
 
 #navbar:hover{
     right:0;
+}
+
+.navbutt{
+    padding-top: 3px;
+    padding-right: 3px;
 }
 
 .inline{
@@ -132,11 +154,11 @@ body{
 }
 
 .navblock{
-    background-color: black;
+    /*background-color: mediumseagreen;*/
 }
 
 .navblock:hover{
-    background-color: #ff4d4d;
+    background-color: darkseagreen;
 }
 
 .destylea{
@@ -177,6 +199,10 @@ body{
     color:black;
 }
 
+.paffils{
+    font-size: 14px;
+}
+
 /*Custom Icon Configs*/
 .custiconrx{
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
@@ -193,5 +219,33 @@ body{
         background: url(WingScythe.png); 
         background-size: contain;
         display: inline-block;
+    }
+    
+    #navbar{
+        position: fixed;
+        top: 0;
+        right: -330px;
+        font-size: 13px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        transition: 0.3s;
+        z-index: 2;
+    }
+    
+    .centgn{
+        padding-top: 13vh;
+        text-align: center;
+        font-size: 50px;
+    }
+}
+
+@media(any-pointer: coarse){
+    .navblock:hover{
+        background-color: darkseagreen;
+    }
+    
+    #navbar:hover{
+        right:0;
     }
 }

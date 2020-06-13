@@ -15,5 +15,9 @@ function overtoggle(){
 }
 
 function hidetoggle(elem){
+    var url = window.location.pathname;
+    if(url.substring(url.lastIndexOf('/')+1)=="index.html" || url.substring(url.lastIndexOf('/')+1)==""){
+        elem.style.animation= "fadein 2s";
+    }
     elem.style.visibility="visible";
 }
