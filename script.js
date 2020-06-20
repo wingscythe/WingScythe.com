@@ -21,3 +21,13 @@ function hidetoggle(elem){
     }
     elem.style.visibility="visible";
 }
+
+function collapse(col) {
+    col.classList.toggle("active");
+    var postDiv = col.nextElementSibling;
+    if (postDiv.style.display === "block") {
+      postDiv.style.display = "none";
+    } else {
+      postDiv.style.display = "block";
+    }
+}

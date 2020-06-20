@@ -218,6 +218,25 @@ body{
     max-width: 100%;
 }
 
+.dropbutt{
+    
+}
+
+.dropcont{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.active {
+    background-color: darkseagreen;
+    color: green;
+    border-top: solid green;
+}
+
 /*Custom Icon Configs ------------------------------------------------------------------------------------------------------*/
 .custiconrx{
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
