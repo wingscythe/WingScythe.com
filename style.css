@@ -230,6 +230,7 @@ body{
     margin-top: -22px;
     padding: 16px;
     color: white;
+    background-color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -245,12 +246,13 @@ body{
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: white;
+    color:black;
 }
 
 /* Caption text */
 .caption {
-    color: #f2f2f2;
+    color: Black;
     font-size: 100px;
     font-weight: bold;
     padding: 8px 12px;
