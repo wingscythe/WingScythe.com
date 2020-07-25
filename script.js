@@ -1,3 +1,13 @@
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 if(document.getElementById("overlay")==null){
     hidetoggle(document.getElementById("wrapper"));
 }else if(document.cookie.includes("visit=true")){
@@ -75,4 +85,14 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     showClasses();
+}
+
+
+if(document.getElementsByClassName("mySlides").length > 0){
+    let n = getParameterByName('n');
+    console.log(n);
+    if(n != ''){
+        n = parseInt(n);
+        currentSlide(n);
+    }
 }
