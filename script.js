@@ -90,8 +90,8 @@ function showSlides(n) {
 
 if(document.getElementsByClassName("mySlides").length > 0){
     let n = getParameterByName('n');
-    console.log(n);
-    if(n != ''){
+    console.log("n: " + n);
+    if(n){
         n = parseInt(n);
         currentSlide(n);
     }
